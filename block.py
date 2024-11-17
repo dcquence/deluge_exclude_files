@@ -5,7 +5,7 @@ client = DelugeRPCClient('127.0.0.1', 58846, '<user', '<password>')
 client.connect()
 
 # Specify the unwanted file extensions
-unwanted_extensions = ['.zipx']
+unwanted_extensions = ['.zipx', '.mkv.lnk']
 
 # Function to check for unwanted files and remove the torrent
 def check_and_remove_torrents():
