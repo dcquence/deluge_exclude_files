@@ -1,7 +1,7 @@
 from deluge_client import DelugeRPCClient
 
 # Connect to Deluge
-client = DelugeRPCClient('127.0.0.1', 58846, '<user', '<password>')
+client = DelugeRPCClient('127.0.0.1', 58846, '<user>', '<password>')
 client.connect()
 
 # Specify the unwanted file extensions
