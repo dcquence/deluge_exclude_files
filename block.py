@@ -1,6 +1,6 @@
 from deluge_client import DelugeRPCClient
 
-client = DelugeRPCClient('10.1.1.9', 58846, 'antibios', 'SteamingWolfePenis_!')
+client = DelugeRPCClient('127.0.0.1', 58846, '<user>', '<password>')
 
 try:
     client.connect()
