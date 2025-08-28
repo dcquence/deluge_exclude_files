@@ -25,13 +25,11 @@ def check_and_remove_torrents():
 
         files = torrent_data.get(b'files', [])
         if not files:
-            print(f"No files found for torrent '{torrent_name}' (ID: {torrent_id}), skipping.")
             continue
 
         for file_info in files:
             file_name = file_info.get(b'path', b'').decode('utf-8', errors='ignore')
             if any(file_name.endswith(ext) for ext in unwanted_extensions):
-                print(f"Removing torrent '{torrent_name}' (label=tv) due to unwanted file '{file_name}'")
                 client.call('core.remove_torrent', torrent_id, True)
                 break
 
